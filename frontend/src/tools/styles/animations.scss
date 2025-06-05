@@ -1,0 +1,9 @@
+@mixin transition($data) {
+    -webkit-transition: $data;
+    -moz-transition: $data;
+    -o-transition: $data;
+    transition: $data;
+}
+@mixin easeTransition($data: all) {
+    @include transition($data 0.3s ease);
+}

@@ -1,0 +1,57 @@
+@import 'tools/styles/flex';
+@import 'tools/styles/adaptive';
+
+.timing {
+    .timeBlocks {
+
+    }
+    .calendar {
+
+    }
+}
+
+@include applyResponsive320() {
+    .timing {
+        @include dFlex();
+        @include flexColumn();
+        @include justifyContentBetween();
+        @include alignItemsCenter();
+        
+        width: 100%;
+
+        gap: 50px;
+
+        .timeBlocks {
+            @include dFlex();
+            @include flexColumn();
+
+            gap: 15px;
+        }
+        .calendar {
+            width: 230px;
+            height: auto;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .timing {
+        @include dFlex();
+        @include flexRow();
+        @include justifyContentBetween();
+        @include alignItemsCenter();
+        
+        width: 100%;
+
+        .timeBlocks {
+            @include dFlex();
+            @include flexColumn();
+
+            gap: 20px;
+        }
+        .calendar {
+            width: 293px;
+            height: auto;
+        }
+    }
+}

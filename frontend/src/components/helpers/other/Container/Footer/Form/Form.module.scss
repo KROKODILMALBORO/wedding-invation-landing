@@ -1,0 +1,66 @@
+@import 'styles/colors';
+@import 'styles/constants';
+@import 'tools/styles/flex';
+@import 'tools/styles/helpers';
+@import 'tools/styles/adaptive';
+
+.form {
+    background: $white;
+
+    z-index: $zIndexFooterForm;
+
+    .input {
+
+    }
+    .button {
+
+    }
+}
+
+@include applyResponsive320() {
+    .form {
+        @include dFlex();
+        @include flexColumn();
+        @include alignItemsCenter();
+
+        @include borderRadius($radiusBlockMobile);
+
+        width: 300px;
+
+        gap: 10px;
+        padding: 15px 30px;
+
+        .input {
+            width: 100%;
+        }
+        .button {
+            width: 100%;
+
+            height: 35px;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .form {
+        @include dFlex();
+        @include flexColumn();
+        @include alignItemsCenter();
+
+        @include borderRadius($radiusBlockDesktop);
+
+        width: 500px;
+
+        gap: 10px;
+        padding: 25px 50px;
+
+        .input {
+
+        }
+        .button {
+            width: 100%;
+
+            height: 45px;
+        }
+    }
+}

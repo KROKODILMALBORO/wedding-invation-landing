@@ -1,0 +1,34 @@
+@mixin defaultInput() {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+@mixin defaultButton() {
+    border: none;
+    background: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+@mixin borderRadius($value) {
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+@mixin hover() {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+@mixin transform($data) {
+    -webkit-transform: $data;
+    -moz-transform: $data;
+    -ms-transform: $data;
+    -o-transform: $data;
+    transform: $data;
+}

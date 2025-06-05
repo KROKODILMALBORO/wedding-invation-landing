@@ -1,0 +1,17 @@
+@import 'fonts';
+
+body {
+    font-family: 'ViaodaLibre', sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+
+    margin: 0;
+}
+
+input, textarea {
+    font-family: 'ViaodaLibre', sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+* {
+    box-sizing: border-box;
+}

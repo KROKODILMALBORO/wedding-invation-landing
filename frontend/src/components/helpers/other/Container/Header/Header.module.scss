@@ -1,0 +1,65 @@
+@import 'styles/colors';
+@import 'styles/typometry';
+@import 'tools/styles/flex';
+@import 'tools/styles/adaptive';
+
+.header {
+    min-width: 100%;
+    
+    background: $black;
+    color: $white;
+
+    .logo {
+
+    }
+    .text {
+        .title {
+
+        }
+        .subtitle {
+
+        }
+    }
+}
+
+@include applyResponsive320() {
+    .header {
+        @include dFlex();
+        @include flexRow();
+        @include alignItemsCenter();
+        @include justifyContentStart();
+
+        .logo {
+            width: auto;
+            height: 105px;
+        }
+        .text {
+            .title {
+                @include titleMobileLarge();
+            }
+            .subtitle {
+                @include titleMobileSmall();
+            }
+        }
+    }
+}
+@include applyResponsive1024() {
+    .header {
+        @include dFlex();
+        @include flexRow();
+        @include justifyContentStart();
+        
+        .logo {
+            width: auto;
+            height: 390px;
+        }
+        .text {
+            .title {
+                @include titleDesktopLarge();
+            }
+            .subtitle {
+                @include titleDesktopSmall();
+            }
+        }
+    }
+}

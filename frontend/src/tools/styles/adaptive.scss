@@ -1,0 +1,10 @@
+@mixin applyResponsive320() {
+    @media screen and (min-width: 320px) {
+        @content;
+    }
+}
+@mixin applyResponsive1024() {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

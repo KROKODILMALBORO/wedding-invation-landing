@@ -1,0 +1,52 @@
+@import 'styles/typometry';
+@import 'tools/styles/flex';
+@import 'tools/styles/adaptive';
+
+.card {
+    .title {
+
+    }
+    .description {
+        text-align: center;
+    }
+}
+
+@include applyResponsive320() {
+    .card {
+        @include dFlex();
+        @include flexColumn();
+        @include alignItemsCenter();
+
+        gap: 8px;
+
+        .title {
+            @include titleMobileLarge();
+        }
+        .description {
+            @include textMobileMiddle();
+
+            width: auto;
+            max-width: 340px;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .card {
+        @include dFlex();
+        @include flexColumn();
+        @include alignItemsCenter();
+
+        gap: 16px;
+
+        .title {
+            @include titleDesktopLarge();
+        }
+        .description {
+            @include textDesktopMiddle();
+            
+            width: auto;
+            max-width: 440px;
+        }
+    }
+}

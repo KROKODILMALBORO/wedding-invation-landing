@@ -1,0 +1,41 @@
+@import 'styles/colors';
+@import 'styles/constants';
+@import 'styles/typometry';
+@import 'tools/styles/helpers';
+@import 'tools/styles/adaptive';
+
+.primaryButton {
+    @include defaultButton();
+
+    background: $black;
+    color: $white;
+
+    cursor: pointer;
+
+    .text {
+        text-align: center;
+    }
+}
+.isDisabled {
+
+}
+
+@include applyResponsive320() {
+    .primaryButton {
+        @include borderRadius($radiusButtonMobile);
+
+        .text {
+            @include textMobileMiddle();
+        }
+    } 
+}
+
+@include applyResponsive1024() {
+    .primaryButton {
+        @include borderRadius($radiusButtonDesktop);
+
+        .text {
+            @include textDesktopMiddle();
+        }
+    } 
+}

@@ -1,0 +1,73 @@
+@mixin titleDesktopLarge() {
+    font-family: 'GreatVibes';
+
+    font-size: 60px;
+    line-height: 66px;
+}
+@mixin titleDesktopMiddle() {
+    font-family: 'GreatVibes';
+
+    font-size: 36px;
+    line-height: 47px;
+}
+@mixin titleDesktopSmall() {
+    font-family: 'GreatVibes';
+
+    font-size: 27px;
+    line-height: 32px;
+}
+@mixin textDesktopLarge() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 22px;
+    line-height: 29px;
+}
+@mixin textDesktopMiddle() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 18px;
+    line-height: 23px;
+}
+@mixin textDesktopSmall() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 16px;
+    line-height: 21px;
+}
+
+@mixin titleMobileLarge() {
+    font-family: 'GreatVibes';
+
+    font-size: 21px;
+    line-height: 25px;
+}
+@mixin titleMobileMiddle() {
+    font-family: 'GreatVibes';
+
+    font-size: 19px;
+    line-height: 25px;
+}
+@mixin titleMobileSmall() {
+    font-family: 'GreatVibes';
+
+    font-size: 14px;
+    line-height: 18px;
+}
+@mixin textMobileLarge() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 16px;
+    line-height: 19px;
+}
+@mixin textMobileMiddle() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 14px;
+    line-height: 18px;
+}
+@mixin textMobileSmall() {
+    font-family: 'ViaodaLibre';
+
+    font-size: 12px;
+    line-height: 16px;
+}

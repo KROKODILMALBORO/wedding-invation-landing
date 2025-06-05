@@ -1,0 +1,41 @@
+@import 'tools/styles/flex';
+@import 'tools/styles/helpers';
+@import 'tools/styles/adaptive';
+
+.colors {
+    img {
+        @include borderRadius(50%);
+    }
+}
+
+@include applyResponsive320() {
+    .colors {
+        @include dFlex();
+        @include flexRow();
+        @include alignItemsCenter();
+
+        gap: 5px;
+        padding-top: 10px;
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .colors {
+        @include dFlex();
+        @include flexRow();
+        @include alignItemsCenter();
+
+        gap: 10px;
+        padding-top: 20px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

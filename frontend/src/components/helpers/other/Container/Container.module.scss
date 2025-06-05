@@ -1,0 +1,50 @@
+@import 'styles/colors';
+@import 'tools/styles/flex';
+@import 'tools/styles/adaptive';
+
+.container {
+    @include dFlex();
+    @include flexColumn();
+    @include alignItemsCenter();
+    @include justifyContentBetween();
+    
+    min-height: 100vh;
+
+    background: $white;
+
+    .content {
+
+    }
+}
+
+@include applyResponsive320() {
+    .container {    
+        .content {
+            @include dFlex();
+            @include flexColumn();
+            @include alignItemsCenter();
+
+            width: 100%;
+            max-width: 600px;
+
+            gap: 50px;
+            padding: 50px 10px 0 10px;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .container {
+        .content {
+            @include dFlex();
+            @include flexColumn();
+            @include alignItemsCenter();
+
+            width: 100%;
+            max-width: 1000px;
+
+            gap: 100px;
+            padding: 100px 0 0 0;
+        }
+    }
+}

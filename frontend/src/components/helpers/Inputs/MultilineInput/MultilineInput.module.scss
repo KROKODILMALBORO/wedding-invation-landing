@@ -1,0 +1,75 @@
+@import 'styles/colors';
+@import 'styles/constants';
+@import 'styles/typometry';
+@import 'tools/styles/helpers';
+@import 'tools/styles/adaptive';
+
+.multilineInput {
+    .errorMessage {
+
+    }
+    .input {
+        @include defaultInput();
+
+        width: inherit;
+
+        color: $black;
+        border: 1px solid $lightGrey;
+
+        &::-webkit-input-placeholder {
+            color: $grey;
+        }
+        &::-moz-placeholder {
+            color: $grey;
+        }
+    }
+}
+.isDisabled {
+
+}
+.isError {
+    .errorMessage {
+        color: $red;
+    }
+    .input {
+        border: 1px solid $red;
+    }
+}
+
+@include applyResponsive320() {
+    .multilineInput {
+        .errorMessage {
+            @include textMobileSmall();
+
+            padding-left: 5px;
+        }
+        .input {
+            @include borderRadius($radiusInputMobile);
+            @include textMobileSmall();
+
+            min-height: 75px;
+            max-height: 75px;
+
+            padding: 8px 12px;
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .multilineInput {
+        .errorMessage {
+            @include textDesktopSmall();
+
+            padding-left: 5px;
+        }
+        .input {
+            @include borderRadius($radiusInputDesktop);
+            @include textDesktopSmall();
+
+            min-height: 125px;
+            max-height: 125px;
+
+            padding: 10px 15px;
+        }
+    }
+}

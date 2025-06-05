@@ -1,0 +1,12 @@
+@mixin dGrid() {
+    display: -ms-grid;
+    display: grid;
+}
+@mixin gridColumns($value) {
+    -ms-grid-columns: $value;
+    grid-template-columns: $value;
+}
+@mixin gridRows($value) {
+    -ms-grid-rows: $value;
+    grid-template-rows: $value;
+}

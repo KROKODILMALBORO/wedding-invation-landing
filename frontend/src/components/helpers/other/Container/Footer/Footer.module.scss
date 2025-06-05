@@ -1,0 +1,53 @@
+@import 'styles/colors';
+@import 'styles/constants';
+@import 'tools/styles/flex';
+@import 'tools/styles/adaptive';
+
+.footer {
+    position: relative;
+
+    min-width: 100%;
+
+    background-image: url('./media/footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: $zIndexFooter;
+
+    &::before {
+        content: '';
+
+        position: absolute; 
+
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+
+        background: linear-gradient(to bottom, $white, $white, transparent);
+
+        z-index: $zIndexFooterBg;
+    }
+}
+
+@include applyResponsive320() {
+    .footer {
+        @include dFlex();
+        @include flexColumn();
+        @include justifyContentCenter();
+        @include alignItemsCenter();
+
+        height: 300px;
+    }
+}
+@include applyResponsive1024() {
+    .footer {
+        @include dFlex();
+        @include flexColumn();
+        @include justifyContentCenter();
+        @include alignItemsCenter();
+        
+        height: 500px;
+    }
+}

@@ -1,0 +1,77 @@
+@import 'styles/colors';
+@import 'styles/typometry';
+@import 'tools/styles/flex';
+@import 'tools/styles/helpers';
+@import 'tools/styles/adaptive';
+
+.timeBlock {
+    .time {
+        @include transform(rotate(-90deg));
+    }
+    .text {
+        border-left: 1px solid $black;
+        
+        .title {
+
+        }
+        .description {
+
+        }
+    }
+}
+
+@include applyResponsive320() {
+    .timeBlock {
+        @include dFlex();
+        @include flexRow();
+        @include alignItemsCenter();
+        
+        .time {
+            @include titleMobileMiddle();
+
+            width: 35px;
+        }
+        .text {
+            @include dFlex();
+            @include flexColumn();
+
+            gap: 4px;
+            padding-left: 10px;
+
+            .title {
+                @include titleMobileMiddle();
+            }
+            .description {
+                @include textMobileMiddle();
+            }
+        }
+    }
+}
+
+@include applyResponsive1024() {
+    .timeBlock {
+        @include dFlex();
+        @include flexRow();
+        @include alignItemsCenter();
+
+        .time {
+            @include titleDesktopMiddle();
+
+            width: 60px;
+        }
+        .text {
+            @include dFlex();
+            @include flexColumn();
+
+            gap: 8px;
+            padding-left: 20px;
+
+            .title {
+                @include titleDesktopMiddle();
+            }
+            .description {
+                @include textDesktopMiddle();
+            }
+        }
+    }
+}
