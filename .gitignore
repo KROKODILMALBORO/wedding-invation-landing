@@ -1,1 +1,4 @@
 .idea
+
+/frontend/src/env
+/frontend/node_modules
